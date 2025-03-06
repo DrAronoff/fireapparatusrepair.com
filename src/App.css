@@ -1,0 +1,366 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/700.css';
+.custom {
+    background-color: rgb(206, 32, 41);
+    color: white;
+    font-size: 12pt;
+    margin-top: 10px;
+  }
+  .contact[_ngcontent-wov-c16] {
+    background-size: contain;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: 2px solid;
+    resize: both;
+    max-width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    height: fit-content;
+    background-position-x: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 90%;
+    align-content: center;
+}
+.column[_ngcontent-wov-c18] {
+    margin: auto;
+    margin-top: 0%;
+    width: 500px;
+    border: 2px solid;
+    border-color: whitesmoke;
+    border-radius: 2%;
+}
+img[_ngcontent-wov-c18] {
+    height: 100%;
+    opacity: 100%;
+    border: 2px, solid;
+    border-color: whitesmoke;
+    border-radius: 2%;
+}
+.services[_ngcontent-wov-c18] {
+    background-size: contain;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: 2px solid;
+    resize: both;
+    max-width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    height: fit-content;
+    background-position-x: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 1%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 100%;
+    align-content: center;
+}
+  .dropdown {
+    background-color: rgb(206, 32, 41);
+    color: white;
+    font-size: 12pt;
+  }
+.custom1 {
+    background-color: rgb(206, 32, 41);
+    color: white;
+    font-size: 12pt;
+    margin-top: 0px;
+}
+.p-dropdown-item-label{
+    background-color: rgb(206, 32, 41);
+    color: white;
+    font-size: 12pt;
+    margin-top: 0px;
+}
+.p-dropdown-items{
+    background-color: rgb(206, 32, 41);
+        border-radius: 5px;
+    border-color: black;
+    border-width: 1px;
+}
+.bg-black{
+    left:50;
+    height: 110px;
+    background: linear-gradient(180deg, #ce2029 0%, rgba(173, 22, 30, 0.9167017149) 35%, rgba(0, 0, 0, 0.6505952723) 100%);
+    line-height: 100px;
+
+}
+.whiteText{
+    font-size: large;
+    color: white;
+}
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.whiteText1{
+    font-size: 16pt;
+    color: black;
+}
+.bg-gray-900{
+    top: 0;
+    background-color: rgb(206, 32, 41);
+    color: white;
+    font-size: 12pt;
+
+}
+.email{
+    color: #000;
+    font-size: 25pt;
+    text-shadow:
+    0px -2px 0 goldenrod,
+    2px -2px 0 goldenrod,
+    2px  0px 0 goldenrod,
+    2px  2px 0 goldenrod,
+    0px  2px 0 goldenrod,
+   -2px  2px 0 goldenrod,
+   -2px  0px 0 goldenrod,
+   -2px -2px 0 goldenrod;
+}
+.text-gray-300{
+    background-color: rgb(206, 32, 41);;
+    font-size: 12pt;
+    color:white;
+}
+.custom-button{
+    padding-top: 30px;
+    color: #fbd42e;
+    font-size: 12pt;
+}
+.ml-10{
+    margin-top: 20px;
+ line-height: 20px;
+}
+h2{
+    font-size: 20pt;
+}
+.link{
+    color: blue;
+}
+button {
+    top: '+30px';
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    bottom:0;
+
+  }
+
+  .max-w-7xl{
+    padding-top: 10px;
+    bottom:0;
+  }
+  .padded{
+    padding-top: 30px;
+  }
+
+.bg-gray-700{
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    bottom:0;
+}
+.custom2{
+    padding-top: 130px;
+
+}
+.custom3{
+    margin:0px;
+    padding:0px;
+    z-index: 100;
+    position: fixed;
+}
+.custom4{
+    position:absolute;
+    top: 5px;
+    right: 20px;
+    background-color: none; 
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+
+@font-face {
+
+    font-family: 'stencil';
+  
+    src: url("C:\Users\jstange\OneDrive - Continental Fire and Safety\Documents\FIREAPPARATUSREPAIR - DONT FUCK UP\FAR\monroefd1\src\assets\fonts\Lafrance-Regular.ttf"); /* Replace 'path/to/your/font.ttf' with the actual path to your TTF file */
+  
+  }
+  
+.stencil{
+    font-family: "stencil";
+    color: #000;
+    text-shadow:
+    0px -1px 0 goldenrod,
+    1px -1px 0 goldenrod,
+    1px  0px 0 goldenrod,
+    1px  1px 0 goldenrod,
+    0px  1px 0 goldenrod,
+   -1px  1px 0 goldenrod,
+   -1px  0px 0 goldenrod,
+   -1px -1px 0 goldenrod;
+    font-size: 15pt;
+    text-align: center;
+}
+
+.column {
+    flex: 25%;
+    max-width: 24%;
+    padding: 0 4px;
+  }
+html, body {
+    height: 100%;
+  }
+body {
+    background-size: cover;
+    margin: 0;
+    background-image: url(https://fireapparatusrepair.com/assets/images/diamondPlate.jpg);
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.img {
+      max-width: 100%;
+  }
+
+.row{
+    display: flex;
+    justify-content: center;
+
+  }
+h1 {
+    padding: 0%;
+    font-family: "stencil";
+    color: #000;
+    text-shadow:
+    0px -2px 0 goldenrod,
+    2px -2px 0 goldenrod,
+    2px  0px 0 goldenrod,
+    2px  2px 0 goldenrod,
+    0px  2px 0 goldenrod,
+   -2px  2px 0 goldenrod,
+   -2px  0px 0 goldenrod,
+   -2px -2px 0 goldenrod;
+    font-size: 40pt;
+    text-align: center;
+}
+
+h3 {
+    font-family: "stencil";
+    color: #000;
+    text-shadow:
+    0px -2px 0 goldenrod,
+    2px -2px 0 goldenrod,
+    2px  0px 0 goldenrod,
+    2px  2px 0 goldenrod,
+    0px  2px 0 goldenrod,
+   -2px  2px 0 goldenrod,
+   -2px  0px 0 goldenrod,
+   -2px -2px 0 goldenrod;
+    font-size: 30pt;
+    text-align: center;
+
+    
+}
+.logo{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.custom5{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: rgb(206, 32, 41);
+    z-index: 99998;
+    height: 100vh;
+}
+.flex{
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+}
+.block{
+    z-index: 99999;
+
+    background-color: none;
+    margin-top: 0px;
+    margin-left: 100px;
+}
+button{
+    background-color: none;
+}
+.container{
+    text-align: center;
+    color: whitesmoke;
+    margin:0;
+    background-size: 100%;
+    background-position: center;
+    height: fit-content;
+    top:0;
+    left:0;
+    max-width: auto;
+    background-image: url(./assets/images/fullgarage.jpg);
+    background-repeat: no-repeat;
+    border: 2px solid;
+    margin: auto;
+    width: 100%;    border-color:whitesmoke;
+    background-size: cover;
+    font-family: "stencil";
+    font-size: 25pt;
+}
+.truckOutside{
+    object-fit: contain;
+}
+
+@media screen and (max-width: 800px) {
+    .custom2{
+        margin-left: 100px;
+    }
+    .title{
+        font-size: 20pt;
+    }
+    .email{
+        color: #000;
+        font-size: 12pt;
+    }
+    .truckOutside{
+        display: none;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .block{
+        display: none;
+
+    }
+
+  }
