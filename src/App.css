@@ -214,7 +214,7 @@ button {
 
     font-family: 'stencil';
   
-    src: url("C:\Users\jstange\OneDrive - Continental Fire and Safety\Documents\FIREAPPARATUSREPAIR - DONT FUCK UP\FAR\monroefd1\src\assets\fonts\Lafrance-Regular.ttf"); /* Replace 'path/to/your/font.ttf' with the actual path to your TTF file */
+    src: url("https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/fonts/Lafrance-Regular.ttf"); /* Replace 'path/to/your/font.ttf' with the actual path to your TTF file */
   
   }
   
