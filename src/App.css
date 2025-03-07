@@ -211,12 +211,12 @@ button {
 }
 
 @font-face {
-
     font-family: 'stencil';
-  
-    src: url("https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/fonts/Lafrance-Regular.ttf"); /* Replace 'path/to/your/font.ttf' with the actual path to your TTF file */
-  
+    src: url("assets/fonts/Lafrance-Regular.woff") format('woff'), /* Replace 'path/to/your/font.ttf' with the actual path to your TTF file */
+    url("assets/fonts/Lafrance-Regular.ttf") format('truetype'),
+    url("assets/fonts/Lafrance-Regular.woff2") format('woff2');
   }
+  
   
 .stencil{
     font-family: "stencil";
@@ -260,7 +260,12 @@ body {
     justify-content: center;
 
   }
+  .title{
+    font-family: "stencil";
+  }
 h1 {
+    
+  
     padding: 0%;
     font-family: "stencil";
     color: #000;
