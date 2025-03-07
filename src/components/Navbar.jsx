@@ -109,7 +109,7 @@ export function Navbar() {
                     Repair Services
                   </NavLink>
                   <br></br>
-                  <NavLink to="/command-vehicles" className={({ isActive }) => 
+                  <NavLink to="/comand-vehicles" className={({ isActive }) => 
                     isActive ? "whiteText" : 
                     "whiteText"
                   }>
