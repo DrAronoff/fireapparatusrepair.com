@@ -245,7 +245,7 @@ html, body {
 body {
     background-size: cover;
     margin: 0;
-    background-image: url(https://fireapparatusrepair.com/assets/images/diamondPlate.jpg);
+    background-image: url(https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/images/diamondPlate.jpg);
     background-repeat: repeat;
     height: 100%;
     width: 100%;

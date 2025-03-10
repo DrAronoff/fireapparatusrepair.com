@@ -17,18 +17,18 @@ export function Home() {
                 <a _ngcontent-tpk-c17="" href="mailto:ron@fireapparatus.com?subject=Mail from Our WebSite" class="email">Ron@fireapparatusrepair.net</a></div></div></div>
             <div _ngcontent-tpk-c17="" class="row">
                 <div _ngcontent-tpk-c17="" class="column">
-                    <img _ngcontent-tpk-c17="" src="https://fireapparatusrepair.com/assets/images/waterousborder.png" class="img-responsive"></img>
+                    <img _ngcontent-tpk-c17="" src="https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/images/waterousborder.png" class="img-responsive"></img>
                 </div>
                 <div _ngcontent-tpk-c17="" class="column">
-                    <img _ngcontent-tpk-c17="" src="https://fireapparatusrepair.com/assets/images/spartanborder.png" class="img-responsive">
+                    <img _ngcontent-tpk-c17="" src="https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/images/spartanborder.png" class="img-responsive">
                     </img>
                 </div>
                 <div _ngcontent-tpk-c17="" class="column">
-                    <img _ngcontent-tpk-c17="" src="https://fireapparatusrepair.com/assets/images/evtborder.jpg" class="img-responsive">
+                    <img _ngcontent-tpk-c17="" src="https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/images/evtborder.jpg" class="img-responsive">
                     </img>
                     </div>
                 <div _ngcontent-tpk-c17="" class="column">
-                    <img _ngcontent-tpk-c17="" src="https://fireapparatusrepair.com/assets/images/haleborder.png" class="img-responsive"></img>
+                    <img _ngcontent-tpk-c17="" src="https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/images/haleborder.png" class="img-responsive"></img>
                     </div>
                     </div>
             </main>

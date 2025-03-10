@@ -26,7 +26,7 @@ export function Navbar() {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                {/* <strong className="right50 stencil">FIRE APPARATUS REPAIR</strong> */}
-               <img width="200px" className="logo" src="https://fireapparatusrepair.com/assets/images/Far_logo_transparent.png"></img>
+               <img width="200px" className="logo" src="https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/assets/images/Far_logo_transparent.png"></img>
                 <Link to="/" className="text-white text-lg font-semibold">
                 
                 </Link>
