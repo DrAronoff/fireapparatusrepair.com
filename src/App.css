@@ -31,14 +31,7 @@
     opacity: 90%;
     align-content: center;
 }
-.column[_ngcontent-wov-c18] {
-    margin: auto;
-    margin-top: 0%;
-    width: 500px;
-    border: 2px solid;
-    border-color: whitesmoke;
-    border-radius: 2%;
-}
+
 img[_ngcontent-wov-c18] {
     height: 100%;
     opacity: 100%;
@@ -234,11 +227,7 @@ button {
     text-align: center;
 }
 
-.column {
-    flex: 25%;
-    max-width: 24%;
-    padding: 0 4px;
-  }
+
 html, body {
     height: 100%;
   }
@@ -255,11 +244,7 @@ body {
       max-width: 100%;
   }
 
-.row{
-    display: flex;
-    justify-content: center;
 
-  }
   .title{
     font-family: "stencil";
   }
@@ -361,11 +346,37 @@ button{
     .truckOutside{
         display: none;
     }
+    .row{
+        justify-content: center;
+    
+    }
+    .column {
+        flex: 25%;
+        width: 100%;
+        padding: 0 4px;
+        border: 2px solid;
+        border-color: whitesmoke;
+        border-radius: 2%;
+        text-align: center;
+    }
   }
   @media screen and (min-width: 600px) {
     .block{
         display: none;
 
     }
-
+    
+    .row{
+        display: flex;
+        justify-content: center;
+    
+    }
+    .column {
+        flex: 25%;
+        max-width: 50%;
+        padding: 0 4px;
+        border: 2px solid;
+        border-color: whitesmoke;
+        border-radius: 2%;
+    }
   }
