@@ -38,6 +38,7 @@ img[_ngcontent-wov-c18] {
     border: 2px, solid;
     border-color: whitesmoke;
     border-radius: 2%;
+    object-fit: contain;
 }
 .services[_ngcontent-wov-c18] {
     background-size: contain;
