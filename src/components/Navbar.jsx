@@ -113,7 +113,7 @@ export function Navbar() {
                     isActive ? "whiteText" : 
                     "whiteText"
                   }>
-                    Custom Vehicle Fabrication
+                    Command Vehicle Fabrication
                   </NavLink>
                   
                   <br></br>
