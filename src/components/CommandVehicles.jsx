@@ -15,10 +15,17 @@ export function CommandVehicles() {
       }
     };
   }, []);
+  
   const [activeTab, setActiveTab] = useState('lighting');
+  const [activeBrand, setActiveBrand] = useState(null);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+    setActiveBrand(null); // Reset brand filter when changing tabs
+  };
+  
+  const handleBrandClick = (brand) => {
+    setActiveBrand(activeBrand === brand ? null : brand); // Toggle brand filter
   };
 
   // CSS styles adapted from the provided CSS
@@ -126,7 +133,13 @@ export function CommandVehicles() {
       color: 'white',
       padding: '10px 20px',
       borderRadius: '5px',
-      fontSize: '16px'
+      fontSize: '16px',
+      cursor: 'pointer',
+      transition: 'background-color 0.3s'
+    },
+    activeBrand: {
+      backgroundColor: '#9e1c23',
+      fontWeight: 'bold'
     },
     featureList: {
       listStyleType: 'none',
@@ -143,6 +156,17 @@ export function CommandVehicles() {
       borderLeft: '4px solid goldenrod',
       marginTop: '20px',
       borderRadius: '0 5px 5px 0'
+    },
+    clearFilter: {
+      display: 'inline-block',
+      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      color: 'white',
+      padding: '8px 15px',
+      borderRadius: '4px',
+      marginTop: '10px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      border: '1px solid rgba(255, 255, 255, 0.4)'
     }
   };
 
@@ -160,13 +184,13 @@ export function CommandVehicles() {
       brands: ["Whelen", "Federal Signal", "Code 3", "Techniq"],
       note: "We can strip an existing emergency vehicle of all lights and sirens and transfer them into a new unit if model and year are comparable.",
       images: [
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Code+3+Siren+Box.jpg", alt: "Code 3 siren control module with handheld microphone", caption: "Interior Siren Control Unit" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Federal+Signal+Lightbar.webp", alt: "Custom lightbar with red and blue LED lighting", caption: "Custom LED Light Bar" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Roof+Lightbar.jpg", alt: "Roof-mounted LED lightbar", caption: "Roof-Mounted LED Lightbar" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Inner+Edge.jpg", alt: "Interior LED lighting system", caption: "Interior Vehicle Lighting" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Outer+Edge.jpg", alt: "Vehicle perimeter LED lighting", caption: "Perimeter Emergency Lighting" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Siren+Speaker.jpg", alt: "Whelen siren speaker", caption: "Whelen Siren Speaker" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Federal+Signal+Siren+Box.jpg", alt: "Federal Signal siren control box", caption: "Federal Signal Siren System" }
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Code+3+Siren+Box.jpg", alt: "Code 3 siren control module with handheld microphone", caption: "Interior Siren Control Unit", brand: "Code 3" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Federal+Signal+Lightbar.webp", alt: "Custom lightbar with red and blue LED lighting", caption: "Custom LED Light Bar", brand: "Federal Signal" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Roof+Lightbar.jpg", alt: "Roof-mounted LED lightbar", caption: "Roof-Mounted LED Lightbar", brand: "Whelen" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Inner+Edge.jpg", alt: "Interior LED lighting system", caption: "Interior Vehicle Lighting", brand: "Whelen" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Outer+Edge.jpg", alt: "Vehicle perimeter LED lighting", caption: "Perimeter Emergency Lighting", brand: "Whelen" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Whelen+Siren+Speaker.jpg", alt: "Whelen siren speaker", caption: "Whelen Siren Speaker", brand: "Whelen" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Audio+and+Visual/Federal+Signal+Siren+Box.jpg", alt: "Federal Signal siren control box", caption: "Federal Signal Siren System", brand: "Federal Signal" }
       ]
     },
     consoles: {
@@ -181,13 +205,13 @@ export function CommandVehicles() {
       ],
       brands: ["Havis Shield", "Troy", "Setina", "Westin"],
       images: [
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Laptop+Mount.jpg", alt: "Vehicle console with laptop mount", caption: "Laptop Mount Integration" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Havis+Center+Console.png", alt: "Havis center console solution", caption: "Havis Center Console" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Center+Console.jpg", alt: "Troy center console installation", caption: "Troy Center Console" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Center+Colsole+2.jpg", alt: "Additional Troy center console view", caption: "Troy Console Configuration" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Center+Console+3.png", alt: "Troy center console model", caption: "Troy Console Model" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Overhead+Console.jpg", alt: "Overhead console installation", caption: "Overhead Console" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Window+Guards.jpg", alt: "Window guards and protection", caption: "Window Protection System" }
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Laptop+Mount.jpg", alt: "Vehicle console with laptop mount", caption: "Laptop Mount Integration", brand: "Troy" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Havis+Center+Console.png", alt: "Havis center console solution", caption: "Havis Center Console", brand: "Havis Shield" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Center+Console.jpg", alt: "Troy center console installation", caption: "Troy Center Console", brand: "Troy" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Center+Colsole+2.jpg", alt: "Additional Troy center console view", caption: "Troy Console Configuration", brand: "Troy" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Center+Console+3.png", alt: "Troy center console model", caption: "Troy Console Model", brand: "Troy" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Overhead+Console.jpg", alt: "Overhead console installation", caption: "Overhead Console", brand: "Troy" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Center+Consoles/Troy+Window+Guards.jpg", alt: "Window guards and protection", caption: "Window Protection System", brand: "Troy" }
       ]
     },
     power: {
@@ -201,10 +225,10 @@ export function CommandVehicles() {
       ],
       brands: ["Kussmaul Battery Conditioners", "Converters / Inverters", "Auto Ejects"],
       images: [
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul+Auto+Eject.jpg", alt: "Kussmaul auto eject system", caption: "Kussmaul Auto-Eject System" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul+Battery+Indicators.jpg", alt: "Battery status indicators", caption: "Battery Status Monitoring" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul+Super+Auto+Eject.jpg", alt: "Kussmaul super auto eject", caption: "Super Auto-Eject System" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul.jpg", alt: "Kussmaul power management unit", caption: "Kussmaul Power Management Unit" }
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul+Auto+Eject.jpg", alt: "Kussmaul auto eject system", caption: "Kussmaul Auto-Eject System", brand: "Kussmaul Battery Conditioners" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul+Battery+Indicators.jpg", alt: "Battery status indicators", caption: "Battery Status Monitoring", brand: "Kussmaul Battery Conditioners" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul+Super+Auto+Eject.jpg", alt: "Kussmaul super auto eject", caption: "Super Auto-Eject System", brand: "Auto Ejects" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Power+Managment/Kussmaul.jpg", alt: "Kussmaul power management unit", caption: "Kussmaul Power Management Unit", brand: "Kussmaul Battery Conditioners" }
       ]
     },
     command: {
@@ -217,10 +241,10 @@ export function CommandVehicles() {
         "We do not custom fabricate rear command boxes. All boxes will be ordered for a vehicle specific layout due to sizing and turn around time."
       ],
       images: [
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box.webp", alt: "Vehicle command box storage system", caption: "Rear Command Storage System" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box+2.png", alt: "Command box with storage drawers", caption: "Command Box Configuration" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box+3.png", alt: "Alternative command box layout", caption: "Alternative Command Box Design" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box+4.png", alt: "Specialized command box storage", caption: "Specialized Command Box Storage" }
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box.webp", alt: "Vehicle command box storage system", caption: "Rear Command Storage System", brand: "Standard" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box+2.png", alt: "Command box with storage drawers", caption: "Command Box Configuration", brand: "Standard" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box+3.png", alt: "Alternative command box layout", caption: "Alternative Command Box Design", brand: "Standard" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Command+Boxes/Rear+Command+Box+4.png", alt: "Specialized command box storage", caption: "Specialized Command Box Storage", brand: "Standard" }
       ]
     },
     partitions: {
@@ -233,14 +257,14 @@ export function CommandVehicles() {
       ],
       brands: ["Setina", "Troy", "Havis"],
       images: [
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Chevy+Tahoe+Door+Panel.png", alt: "Chevy Tahoe door panel", caption: "Chevy Tahoe Door Panel" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Dodge+Charger+Door+Panel.webp", alt: "Dodge Charger door panel", caption: "Dodge Charger Door Panel" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Sentina+Wire+Partition.png", alt: "Wire mesh partition", caption: "Setina Wire Partition" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Sentina+Lexan+Partition.png", alt: "Lexan transparent partition", caption: "Setina Lexan Partition" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Ford+Expedition+Full+Partition.png", alt: "Ford Expedition full partition", caption: "Ford Expedition Full Partition" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Ford+Explorer+Full+Partition.webp", alt: "Ford Explorer full partition", caption: "Ford Explorer Full Partition" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Dodge+Durango+Full+Paartition.webp", alt: "Dodge Durango full partition", caption: "Dodge Durango Full Partition" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Kussmaul+Converter.jpg", alt: "Kussmaul power converter", caption: "Kussmaul Power Converter for Systems" }
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Chevy+Tahoe+Door+Panel.png", alt: "Chevy Tahoe door panel", caption: "Chevy Tahoe Door Panel", brand: "Troy" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Dodge+Charger+Door+Panel.webp", alt: "Dodge Charger door panel", caption: "Dodge Charger Door Panel", brand: "Troy" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Sentina+Wire+Partition.png", alt: "Wire mesh partition", caption: "Setina Wire Partition", brand: "Setina" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Sentina+Lexan+Partition.png", alt: "Lexan transparent partition", caption: "Setina Lexan Partition", brand: "Setina" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Ford+Expedition+Full+Partition.png", alt: "Ford Expedition full partition", caption: "Ford Expedition Full Partition", brand: "Havis" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Ford+Explorer+Full+Partition.webp", alt: "Ford Explorer full partition", caption: "Ford Explorer Full Partition", brand: "Havis" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Dodge+Durango+Full+Paartition.webp", alt: "Dodge Durango full partition", caption: "Dodge Durango Full Partition", brand: "Setina" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Partitions/Kussmaul+Converter.jpg", alt: "Kussmaul power converter", caption: "Kussmaul Power Converter for Systems", brand: "Kussmaul" }
       ]
     },
     pushbars: {
@@ -254,11 +278,11 @@ export function CommandVehicles() {
       ],
       brands: ["Westin", "Setina"],
       images: [
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Sentina+Push+Bumper.png", alt: "Setina push bumper", caption: "Setina Push Bumper" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Setina+Bar+with+Lights+and+Fender+Guards.jpg", alt: "Setina bar with integrated lights", caption: "Setina Bar with Integrated Lights" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Setina+Bar+with+Lights.jpeg", alt: "Setina bar with emergency lights", caption: "Setina Bar with Emergency Lights" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Westin+Push+Bumper+Ford.jpg", alt: "Westin push bumper for Ford vehicle", caption: "Westin Push Bumper for Ford" },
-        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Westin+Push+Pumper.jpg", alt: "Westin push bumper", caption: "Westin Push Bumper" }
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Sentina+Push+Bumper.png", alt: "Setina push bumper", caption: "Setina Push Bumper", brand: "Setina" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Setina+Bar+with+Lights+and+Fender+Guards.jpg", alt: "Setina bar with integrated lights", caption: "Setina Bar with Integrated Lights", brand: "Setina" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Setina+Bar+with+Lights.jpeg", alt: "Setina bar with emergency lights", caption: "Setina Bar with Emergency Lights", brand: "Setina" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Westin+Push+Bumper+Ford.jpg", alt: "Westin push bumper for Ford vehicle", caption: "Westin Push Bumper for Ford", brand: "Westin" },
+        { src: "https://s3.us-east-2.amazonaws.com/fireapparatusrepair.com/photos/Push+Bars/Westin+Push+Pumper.jpg", alt: "Westin push bumper", caption: "Westin Push Bumper", brand: "Westin" }
       ]
     }
   };
@@ -266,6 +290,11 @@ export function CommandVehicles() {
   // Render currently active category content
   const renderCategoryContent = () => {
     const category = categoryData[activeTab];
+    
+    // Filter images by selected brand if a brand is active
+    const filteredImages = activeBrand 
+      ? category.images.filter(image => image.brand === activeBrand)
+      : category.images;
     
     return (
       <div style={styles.contentContainer}>
@@ -283,9 +312,29 @@ export function CommandVehicles() {
             <h3 style={{...styles.subheader, fontSize: '20px'}}>Available Brands:</h3>
             <div style={styles.brandList}>
               {category.brands.map((brand, index) => (
-                <div key={index} style={styles.brandItem}>{brand}</div>
+                <div 
+                  key={index} 
+                  style={{
+                    ...styles.brandItem, 
+                    ...(activeBrand === brand ? styles.activeBrand : {})
+                  }}
+                  onClick={() => handleBrandClick(brand)}
+                >
+                  {brand}
+                </div>
               ))}
             </div>
+            
+            {activeBrand && (
+              <div>
+                <div 
+                  style={styles.clearFilter}
+                  onClick={() => setActiveBrand(null)}
+                >
+                  Clear brand filter
+                </div>
+              </div>
+            )}
           </>
         )}
         
@@ -295,18 +344,28 @@ export function CommandVehicles() {
           </div>
         )}
         
-        <div style={styles.imageGrid}>
-          {category.images.map((image, index) => (
-            <div key={index} style={styles.imageContainer}>
-              <img 
-                src={image.src} 
-                alt={image.alt} 
-                style={styles.image}
-              />
-              <p style={styles.caption}>{image.caption}</p>
-            </div>
-          ))}
-        </div>
+        {activeBrand && filteredImages.length === 0 ? (
+          <div style={{textAlign: 'center', margin: '30px 0'}}>
+            <p>No products available for {activeBrand} in this category.</p>
+          </div>
+        ) : (
+          <div style={styles.imageGrid}>
+            {filteredImages.map((image, index) => (
+              <div key={index} style={styles.imageContainer}>
+                <img 
+                  src={image.src} 
+                  alt={image.alt} 
+                  style={styles.image}
+                />
+                <p style={styles.caption}>
+                  {image.caption}
+                  <br />
+                  <small style={{color: '#ccc'}}>{image.brand}</small>
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     );
   };
