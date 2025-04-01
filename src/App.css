@@ -120,15 +120,7 @@ img[_ngcontent-wov-c18] {
 .email{
     color: #000;
     font-size: 25pt;
-    text-shadow:
-    0px -2px 0 goldenrod,
-    2px -2px 0 goldenrod,
-    2px  0px 0 goldenrod,
-    2px  2px 0 goldenrod,
-    0px  2px 0 goldenrod,
-   -2px  2px 0 goldenrod,
-   -2px  0px 0 goldenrod,
-   -2px -2px 0 goldenrod;
+
 }
 .text-gray-300{
     background-color: rgb(206, 32, 41);;
@@ -217,17 +209,9 @@ button {
 .stencil{
     font-family: "stencil";
     color: #000;
-    text-shadow:
-    0px -1px 0 goldenrod,
-    1px -1px 0 goldenrod,
-    1px  0px 0 goldenrod,
-    1px  1px 0 goldenrod,
-    0px  1px 0 goldenrod,
-   -1px  1px 0 goldenrod,
-   -1px  0px 0 goldenrod,
-   -1px -1px 0 goldenrod;
     font-size: 15pt;
     text-align: center;
+    filter: url(#outline);
 }
 
 
@@ -257,15 +241,6 @@ h1 {
     padding: 0%;
     font-family: "stencil";
     color: #000;
-    text-shadow:
-    0px -2px 0 goldenrod,
-    2px -2px 0 goldenrod,
-    2px  0px 0 goldenrod,
-    2px  2px 0 goldenrod,
-    0px  2px 0 goldenrod,
-   -2px  2px 0 goldenrod,
-   -2px  0px 0 goldenrod,
-   -2px -2px 0 goldenrod;
     font-size: 40pt;
     text-align: center;
 }
@@ -273,15 +248,8 @@ h1 {
 h3 {
     font-family: "stencil";
     color: #000;
-    text-shadow:
-    0px -2px 0 goldenrod,
-    2px -2px 0 goldenrod,
-    2px  0px 0 goldenrod,
-    2px  2px 0 goldenrod,
-    0px  2px 0 goldenrod,
-   -2px  2px 0 goldenrod,
-   -2px  0px 0 goldenrod,
-   -2px -2px 0 goldenrod;
+
+
     font-size: 30pt;
     text-align: center;
 
@@ -344,7 +312,7 @@ button{
     }
     .email{
         color: #000;
-        font-size: 12pt;
+        font-size: 15pt;
     }
     .truckOutside{
         display: none;

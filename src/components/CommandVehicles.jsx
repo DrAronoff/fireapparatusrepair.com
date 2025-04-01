@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { StencilTextDouble } from './StencilText';
 
 export function CommandVehicles() {
   // This ensures the component mounts properly in the body
@@ -43,33 +44,15 @@ export function CommandVehicles() {
       fontFamily: 'stencil, Arial, sans-serif',
       color: '#000',
       fontSize: '36px',
-      textAlign: 'center',
-      textShadow: `
-        0px -2px 0 goldenrod,
-        2px -2px 0 goldenrod,
-        2px 0px 0 goldenrod,
-        2px 2px 0 goldenrod,
-        0px 2px 0 goldenrod,
-        -2px 2px 0 goldenrod,
-        -2px 0px 0 goldenrod,
-        -2px -2px 0 goldenrod
-      `
+      textAlign: 'center'
+      // Removed text-shadow as it will be handled by StencilTextDouble
     },
     subheader: {
       fontFamily: 'stencil, Arial, sans-serif',
       color: '#000',
       fontSize: '24px',
-      textAlign: 'center',
-      textShadow: `
-        0px -1px 0 goldenrod,
-        1px -1px 0 goldenrod,
-        1px 0px 0 goldenrod,
-        1px 1px 0 goldenrod,
-        0px 1px 0 goldenrod,
-        -1px 1px 0 goldenrod,
-        -1px 0px 0 goldenrod,
-        -1px -1px 0 goldenrod
-      `
+      textAlign: 'center'
+      // Removed text-shadow as it will be handled by StencilTextDouble
     },
     tabContainer: {
       display: 'flex',
@@ -298,7 +281,9 @@ export function CommandVehicles() {
     
     return (
       <div style={styles.contentContainer}>
-        <h2 style={styles.subheader}>{category.title}</h2>
+        <h2>
+          <StencilTextDouble fontSize="24px">{category.title}</StencilTextDouble>
+        </h2>
         <p>{category.description}</p>
         
         <ul style={styles.featureList}>
@@ -309,7 +294,9 @@ export function CommandVehicles() {
         
         {category.brands && (
           <>
-            <h3 style={{...styles.subheader, fontSize: '20px'}}>Available Brands:</h3>
+            <h3>
+              <StencilTextDouble fontSize="20px">Available Brands:</StencilTextDouble>
+            </h3>
             <div style={styles.brandList}>
               {category.brands.map((brand, index) => (
                 <div 
@@ -321,7 +308,7 @@ export function CommandVehicles() {
                   onClick={() => handleBrandClick(brand)}
                 >
                   {brand}
-                </div>
+                </div> 
               ))}
             </div>
             
@@ -374,8 +361,12 @@ export function CommandVehicles() {
   
   return (
     <div style={styles.container} className="command-vehicles-container">
-      <h1 style={styles.header}>Fire Apparatus Repair</h1>
-      <h2 style={styles.subheader}>Custom Command Vehicle Solutions</h2>
+      <h1>
+        <StencilTextDouble fontSize="36px">Fire Apparatus Repair</StencilTextDouble>
+      </h1>
+      <h2>
+        <StencilTextDouble fontSize="24px">Custom Command Vehicle Solutions</StencilTextDouble>
+      </h2>
       
       <div style={styles.tabContainer}>
         <button 
@@ -419,7 +410,9 @@ export function CommandVehicles() {
       {renderCategoryContent()}
       
       <div style={{marginTop: '30px', padding: '20px', backgroundColor: 'rgba(206, 32, 41, 0.1)', borderRadius: '5px'}}>
-        <h3 style={{...styles.subheader, fontSize: '20px'}}>Upfitting Options</h3>
+        <h3>
+          <StencilTextDouble fontSize="20px">Upfitting Options</StencilTextDouble> 
+        </h3>
         <ul style={styles.featureList}>
           <li style={styles.featureItem}>Taking a NEW off the line car, whether it be outfitted with the "Emergency Package" or not and outfit it with whatever the customer wants.</li>
           <li style={styles.featureItem}>Taking existing emergency vehicle and striping it of all emergency lighting and equipment and installing it into a new vehicle. The vehicle must match year model (body style or model cannot change)</li>
