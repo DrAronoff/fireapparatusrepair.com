@@ -40,7 +40,8 @@ export const StencilTextDouble = ({ children, fontSize = '15pt' }) => {
       style={{
         position: 'relative',
         textAlign: 'center',
-        display: 'inline-block'
+        display: 'inline-block',
+        width: '100%'
       }}
     >
       <div
